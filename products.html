@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Arihant Agro Industries</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to products page */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            overflow: visible; /* Ensure that rotated images aren't clipped */
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.6s ease;
+            transform-origin: center center; /* Center the transform origin */
+        }
+        
+        /* Hover effect */
+        .product-item:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        /* Clicked effect */
+        .product-item.clicked img {
+            transform: translateY(-20px) rotateY(30deg) rotateX(20deg);
+        }
+
+        /* Reverting the effect */
+        .product-item.clicked img.clicked-reverse {
+            transform: translateY(0) rotateY(0) rotateX(0);
+        }
+        
+        /* More styles */
+        .product-item h3 {
+            margin: 0 0 10px;
+        }
+
+        .product-item p {
+            margin: 0 0 10px;
+        }
+
+        .product-info {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .product-item .more-info {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .product-item .more-info:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Arihant Agro Industries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="product-list">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="/assets/product1.png" alt="Product 1">
+            <h3>Root-X</h3>
+            <p>Liquid Humic Acid 1L/5L</p>
+            <div class="product-info">
+                <p>Root-X is a high-quality liquid humic acid designed to enhance soil fertility and plant growth. It improves soil structure, increases nutrient uptake, and promotes root development. Ideal for use in all types of soil.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="/assets/product2.png" alt="Product 2">
+            <h3>Rooter-12</h3>
+            <p>Humic Acid Granules 5kg</p>
+            <div class="product-info">
+                <p>Rooter-12 provides essential humic substances to the soil in a convenient granular form. It aids in improving soil texture, moisture retention, and nutrient availability. Perfect for use in gardens and agricultural fields.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="/assets/product3.png" alt="Product 3">
+            <h3>Nutrilight</h3>
+            <p>Micronutrient Mixture Grade-I 5kg</p>
+            <div class="product-info">
+                <p>Nutrilight Micronutrient Mixture is formulated to address nutrient deficiencies in plants. It contains a balanced mix of essential micronutrients that promote healthy growth and high yields.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="/assets/product4.png" alt="Product 4">
+            <h3>Nutrilight</h3>
+            <p>Micronutrient Liquid Fertilizer 1L/500ml</p>
+            <div class="product-info">
+                <p>Nutrilight Liquid Fertilizer provides essential micronutrients in a liquid form for easy application. It helps correct micronutrient deficiencies and enhances overall plant health.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="/assets/product5.png" alt="Product 5">
+            <h3>Spray On</h3>
+            <p>Silicon Based Spreader 100ml/250ml</p>
+            <div class="product-info">
+                <p>Spray On is a silicon-based spreader that improves the effectiveness of pesticides and fertilizers by ensuring better coverage and adherence to plant surfaces. It enhances the performance of agrochemicals.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-item">
+            <img src="/assets/product6.png" alt="Product 6">
+            <h3>Ankur</h3>
+            <p>City Compost 40kg</p>
+            <div class="product-info">
+                <p>Ankur City Compost is a nutrient-rich compost made from urban organic waste. It improves soil fertility, enhances plant growth, and is an eco-friendly alternative to chemical fertilizers.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="/assets/product7.png" alt="Product 7">
+            <h3>Ch. Nutrilight</h3>
+            <p>Chelated Mix Micronutrient 500gm</p>
+            <div class="product-info">
+                <p>Ch. Nutrilight Chelated Micronutrient is designed to correct deficiencies of essential micronutrients in plants. It provides balanced nutrition to ensure optimal growth and development.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-item">
+            <img src="/assets/product8.png" alt="Product 8">
+            <h3>Sil-Power</h3>
+            <p>Silicon</p>
+            <div class="product-info">
+                <p>Sil-Power is a pure silicon product that enhances plant resilience to environmental stress and diseases. It strengthens plant cell walls and improves overall plant health.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-item">
+            <img src="/assets/product9.png" alt="Product 9">
+            <h3>Bhu-Sudha</h3>
+            <p>Calcium Sulphate CaSO4 (T.P.) 80% Purity</p>
+            <div class="product-info">
+                <p>Bhu-Sudha is a high-purity calcium sulphate product used to improve soil structure, provide calcium for plant growth, and correct soil pH imbalances.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-item">
+            <img src="/assets/Product10.jpg" alt="Product 10">
+            <h3>Natural Potash</h3>
+            <p>Potash Derived from Molasses 50kg</p>
+            <div class="product-info">
+                <p>Natural Potash is a potassium-rich fertilizer derived from molasses. It enhances plant growth, improves fruit and flower quality, and supports overall plant health.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product-item">
+            <img src="/assets/Product11.jpg" alt="Product 11">
+            <h3>Balance</h3>
+            <p>Diatomite Silicon 40kg</p>
+            <div class="product-info">
+                <p>Balance Diatomite Silicon is a soil amendment that improves soil aeration, water retention, and nutrient availability. It helps in the formation of healthy plant roots and enhances crop yields.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product-item">
+            <img src="/assets/Product12.JPG" alt="Product 12">
+            <h3>Calci Balance</h3>
+            <p>Gypsum 40kg</p>
+            <div class="product-info">
+                <p>Calci Balance Gypsum is used to improve soil structure, increase water infiltration, and reduce soil compaction. It provides essential calcium and sulfur for plant nutrition.</p>
+            </div>
+            <span class="more-info">More Info</span>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>&copy; 2024 Arihant Agro Industries. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to handle showing and hiding product information
+    document.querySelectorAll('.more-info').forEach(button => {
+        button.addEventListener('click', function() {
+            const info = this.previousElementSibling;
+            info.style.display = info.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
+</body>
+</html>
